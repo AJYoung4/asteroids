@@ -9,7 +9,10 @@ def main():
     print(f"Screen height: {SCREEN_HEIGHT}")
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    
+    clock = pygame.time.Clock()
+    dt = 0
+
+
     # Game Loop
     while True:
         # check for quit
@@ -23,6 +26,9 @@ def main():
         
         # update the display
         pygame.display.flip()
+
+        # set fps 60 and get delta time
+        dt = clock.tick(60) / 1000 # convert milliseconds to seconds
 
 
 
