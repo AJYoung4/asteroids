@@ -12,6 +12,11 @@ def main():
     
     # Game Loop
     while True:
+        # check for quit
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+
         
         # fill the screen black
         screen.fill((0, 0, 0))
